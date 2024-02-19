@@ -1,0 +1,10 @@
+.layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1296px;
+  margin: auto;
+  margin-top: 2rem ;
+  margin-bottom: 2rem;
+}

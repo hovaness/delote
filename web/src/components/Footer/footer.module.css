@@ -1,0 +1,35 @@
+.content{
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(255,255,255, 0.5);
+  border-top: 1px solid rgb(255,255,255, 0.5);
+  width: 1296px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.elem{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.elem h1{
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.elem p{
+  font-size: 18px;
+}
+
+.copyright{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  color: rgb(255,255,255, 0.5);
+  font-size: 18px;
+  margin-top: 30px;
+}
