@@ -1,0 +1,14 @@
+.background{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 1920px;
+  height: 1038px;
+  z-index: -1;
+}
+
+h1{
+  font-size: 72px;
+  font-weight: 700;
+  margin: auto;
+}
