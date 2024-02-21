@@ -5,8 +5,21 @@ import menu from 'public/assets/menu.svg'
 import { Link, routes } from '@redwoodjs/router'
 
 import styles from './header.module.css'
+import { useState } from 'react'
+import NavDrawer from '../Drawer/Drawer'
 
 const Header = () => {
+  const [open,setOpen] = useState(false);
+
+  function showDrawer(){
+    console.log(open)
+    setOpen(true);
+  };
+
+  function onClose(){
+    setOpen(false);
+  };
+
   return (
     <>
       <div className={styles.content}>
@@ -18,7 +31,9 @@ const Header = () => {
           <Link className={styles.liElem} to={routes.masters()}>
             Мастера
           </Link>
-          <img alt="asd" src={logo} />
+          <Link to={routes.home()}>
+            <img alt="asd" src={logo} />
+          </Link>
           <Link className={styles.liElem} to={routes.price()}>
             Цены
           </Link>
@@ -26,7 +41,8 @@ const Header = () => {
             Контакты
           </Link>
         </div>
-        <img src={menu} alt="menu" />
+        <img onClick={showDrawer} src={menu} alt="menu" />
+        <NavDrawer open={open} onClose={onClose}/>
       </div>
     </>
   )

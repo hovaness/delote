@@ -5,9 +5,10 @@
   width: 1920px;
   height: 1038px;
   z-index: -1;
+  background-attachment:fixed;
 }
 
-h1{
+.title{
   font-size: 72px;
   font-weight: 700;
   margin: auto;

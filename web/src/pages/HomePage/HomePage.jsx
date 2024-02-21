@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import background from 'public/assets/background.png'
+import { Typography } from 'antd';
 
 import { Link, routes } from '@redwoodjs/router'
 import { Metadata } from '@redwoodjs/web'
@@ -12,9 +13,9 @@ const HomePage = () => {
       <Metadata title="Home" description="Home page" />
       <img className={styles.background} src={background} alt="background" />
       <div style={{ marginTop: 250 }}></div>
-      <h1>Салон красоты</h1>
-      <h1>«Delote-Beauty»</h1>
-      <h1>на Крестовском</h1>
+      <h1 className={styles.title}>Салон красоты</h1>
+      <h1 className={styles.title}>«Delote-Beauty»</h1>
+      <h1 className={styles.title}>на Крестовском</h1>
     </>
   )
 }

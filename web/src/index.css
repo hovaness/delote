@@ -63,3 +63,5 @@ input.error, textarea.error {
 .flex-between button {
   display: inline;
 }
+html { overflow-y: scroll; }
+
