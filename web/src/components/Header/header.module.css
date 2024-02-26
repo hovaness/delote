@@ -7,6 +7,19 @@
   border-bottom: 1px solid rgb(255,255,255, 0.5);
   width: 1296px;
   margin: 0 auto;
+  transition: all 1s ease-out;
+}
+
+.contentScrolled{
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #111;
+  transition: all 0.5s ease-out;
 }
 
 img{
@@ -24,6 +37,7 @@ img{
   text-decoration: none;
   color: white;
   font-size: 18px;
+  font-weight: 600;
 }
 
 

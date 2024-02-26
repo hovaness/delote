@@ -1,12 +1,43 @@
+
+
 .container{
-  padding: 40px 80px;
+  padding: 0px 50px;
+}
+
+.container h1{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.log{
+  display: flex;
+}
+
+.log p{
+  font-size: 24px;
+  text-decoration: underline;
+  margin-right: 15px;
+}
+
+.container p{
+  font-family: "Cormorant Garamond", serif;
 }
 
 .desc{
   font-weight: 400;
-  font-size: 18px;
+  font-size: 24px;
   width: 315px;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
 .content{
@@ -16,14 +47,57 @@
   margin-bottom: 60px;
 }
 
-.content h1{
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
+.contentTitle{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
 }
+
+.contentTitle h1{
+  font-size: 24px;
+  margin: 0;
+}
+
 
 .content p{
   width: 315px;
   font-size: 18px;
   font-weight: 400;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+  gap:18px;
+}
+
+.name{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap:8px;
+}
+
+.name h1{
+  font-size: 24px;
+  margin: 0 ;
+}
+
+.name p{
+  font-size: 24px;
+}
+
+.record{
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  padding: 15px 20px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.record p{
+  font-size: 24px;
 }

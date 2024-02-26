@@ -2,7 +2,7 @@
   position: absolute;
   top:0;
   left: 0;
-  width: 1920px;
+  width: 100%;
   height: 1038px;
   z-index: -1;
   background-attachment:fixed;
@@ -12,4 +12,31 @@
   font-size: 72px;
   font-weight: 700;
   margin: auto;
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+}
+
+.scroll{
+  margin-top: 220px;
+  margin-bottom: 220px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.scroll p{
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.desc{
+  width: 856px;
+  font-size: 27px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.descConteiner{
+  margin-top: 60px;
+  margin-bottom: 95px;
 }

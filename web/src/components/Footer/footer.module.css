@@ -10,6 +10,11 @@
   justify-content: space-between;
 }
 
+.content h1{
+  font-family: "EB Gormorand", serif;
+  font-weight: 700;
+}
+
 .elem{
   display: flex;
   flex-direction: column;
@@ -32,4 +37,5 @@
   color: rgb(255,255,255, 0.5);
   font-size: 18px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }

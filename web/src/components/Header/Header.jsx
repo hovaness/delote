@@ -1,28 +1,44 @@
+import { useState, useEffect } from 'react'
+
 import instagram from 'public/assets/inst.svg'
 import logo from 'public/assets/logo.svg'
 import menu from 'public/assets/menu.svg'
 
 import { Link, routes } from '@redwoodjs/router'
 
-import styles from './header.module.css'
-import { useState } from 'react'
 import NavDrawer from '../Drawer/Drawer'
 
+import styles from './header.module.css'
+
 const Header = () => {
-  const [open,setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
+  const [scrollTop, setScrollTop] = useState(0)
 
-  function showDrawer(){
-    console.log(open)
-    setOpen(true);
-  };
+  useEffect(() => {
+    function handleScroll() {
+      setScrollTop(window.scrollY)
+    }
 
-  function onClose(){
-    setOpen(false);
-  };
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  function showDrawer() {
+    setOpen(true)
+  }
+
+  function onClose() {
+    setOpen(false)
+  }
 
   return (
     <>
-      <div className={styles.content}>
+      <div
+        className={scrollTop > 300 ? styles.contentScrolled : styles.content}
+      >
         <img src={instagram} alt="inst" />
         <div className={styles.nav}>
           <Link className={styles.liElem} to={routes.home()}>
@@ -42,7 +58,7 @@ const Header = () => {
           </Link>
         </div>
         <img onClick={showDrawer} src={menu} alt="menu" />
-        <NavDrawer open={open} onClose={onClose}/>
+        <NavDrawer open={open} onClose={onClose} />
       </div>
     </>
   )
