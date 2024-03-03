@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={scrollTop > 300 ? styles.contentScrolled : styles.content}
+        className={scrollTop > 150 ? styles.contentScrolled : styles.content}
       >
         <img src={instagram} alt="inst" />
         <div className={styles.nav}>

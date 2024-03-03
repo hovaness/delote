@@ -9,10 +9,15 @@ import phoneIcon from 'public/assets/phone.svg'
 import readMore from 'public/assets/read_more.svg'
 import timeIcon from 'public/assets/time.svg'
 
+import NavModal from '../Modal/Modal'
+
 import styles from './drawer.module.css'
 
 const NavDrawer = ({ open, onClose }) => {
   const [auth, setAuth] = useState(false)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [modalService, setModalService] = useState('')
+
   const name = 'Ararat'
   const surname = 'Hovanesyan'
   const data = [
@@ -22,13 +27,17 @@ const NavDrawer = ({ open, onClose }) => {
     },
     {
       service: 'Выпрямление ногтей',
-      time: '12.01.24г (16.00)',
+      time: '12.21.27г (16.00)',
     },
     {
       service: 'Ламинация рук',
       time: '12.01.24г (16.00)',
     },
   ]
+
+  function closeModal() {
+    setModalIsOpen(false)
+  }
   return (
     <Drawer
       closeIcon={null}
@@ -71,8 +80,20 @@ const NavDrawer = ({ open, onClose }) => {
                 <div style={{ width: 250 }}>
                   <p>Время: {item.time}</p>
                   <p>Услуга: {item.service}</p>
+                  <NavModal
+                    record={modalService}
+                    isOpen={modalIsOpen}
+                    onClose={closeModal}
+                  />
                 </div>
-                <img src={readMore} alt="readMore" />
+                <img
+                  onClick={() => {
+                    setModalService(item)
+                    setModalIsOpen(true)
+                  }}
+                  src={readMore}
+                  alt="readMore"
+                />
               </div>
             ))}
           </>

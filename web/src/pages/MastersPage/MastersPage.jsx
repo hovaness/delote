@@ -1,19 +1,15 @@
-import { Link, routes } from '@redwoodjs/router'
 import { Metadata } from '@redwoodjs/web'
+
+import MastersCell from 'src/components/Master/MasterCell/MasterCell'
+import styles from 'src/pages/MastersPage/mastersPage.module.css'
 
 const MastersPage = () => {
   return (
     <>
       <Metadata title="Masters" description="Masters page" />
 
-      <h1>MastersPage</h1>
-      <p>
-        Find me in <code>./web/src/pages/MastersPage/MastersPage.jsx</code>
-      </p>
-      <p>
-        My default route is named <code>masters</code>, link to me with `
-        <Link to={routes.masters()}>Masters</Link>`
-      </p>
+      <h1 className={styles.title}>Наши мастера</h1>
+      <MastersCell />
     </>
   )
 }

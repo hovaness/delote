@@ -29,26 +29,6 @@ const CategoryList = ({ categories }) => {
             </div>
           )
         })}
-        {/* {categories.map((category) => (
-          <div key={category.id}>
-            <Link to={`/services/${category.photo}`}>
-              <img
-                style={{ marginBottom: 15 }}
-                src={require('public/assets/categories/cosmetology.png')}
-                alt=""
-              />
-              <p
-                style={{
-                  fontSize: 30,
-                  fontWeight: 400,
-                  fontFamily: '"EB Garamond", serif',
-                }}
-              >
-                {category.name}
-              </p>
-            </Link>
-          </div>
-        ))} */}
       </div>
     </>
   )

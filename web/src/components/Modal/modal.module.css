@@ -1,0 +1,18 @@
+.header{
+  text-align: center;
+  font-family: "Garamond", serif;
+  font-weight: 700;
+}
+
+.body{
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  background-color: #E5E4E4;
+  border-radius: 10px;
+}
+
+.content{
+  padding: 20px 50px;
+  font-size: 20px;
+}

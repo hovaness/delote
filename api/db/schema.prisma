@@ -23,6 +23,7 @@ model Category {
   photo   String?
   desc    String?
   Service Service[]
+  Master  Master[]
 }
 
 model Service {
@@ -32,4 +33,13 @@ model Service {
   desc       String?
   category   Category? @relation(fields: [categoryId], references: [id])
   categoryId Int?
+}
+
+model Master {
+  id             Int      @id @default(autoincrement())
+  firstName      String
+  secondName     String
+  photo          String?
+  specialization Category @relation(fields: [categoryId], references: [id])
+  categoryId     Int
 }

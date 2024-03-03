@@ -5,6 +5,7 @@ export const schema = gql`
     photo: String
     desc: String
     Service: [Service]!
+    Master: [Master]!
   }
 
   type Query {
