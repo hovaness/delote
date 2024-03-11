@@ -17,7 +17,7 @@ const MasterList = ({ masters }) => {
         {masters.map((master) => {
           return (
             <div key={master.id}>
-              <Link to={`/services/${master.photo}`}>
+              <Link to={`/masters/${master.id}`}>
                 <img
                   className={styles.image}
                   style={{ marginBottom: 15 }}

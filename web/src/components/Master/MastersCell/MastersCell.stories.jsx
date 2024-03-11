@@ -1,5 +1,5 @@
-import { Loading, Empty, Failure, Success } from './MasterCell'
-import { standard } from './MasterCell.mock'
+import { Loading, Empty, Failure, Success } from './MastersCell'
+import { standard } from './MastersCell.mock'
 
 const meta = {
   title: 'Cells/MasterCell',

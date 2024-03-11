@@ -14,11 +14,13 @@ import AppLayout from './layouts/AppLayout/AppLayout'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/master" page={MasterPage} name="master" />
       <Set wrap={AppLayout}>
         <Route path="/contacts" page={ContactsPage} name="contacts" />
         <Route path="/price" page={PricePage} name="price" />
         <Route path="/masters" page={MastersPage} name="masters" />
         <Route path="/" page={HomePage} name="home" />
+        <Route path="/masters/{id:Int}" page={MasterPage} name="master" />
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>

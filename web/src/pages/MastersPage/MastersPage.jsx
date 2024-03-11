@@ -1,6 +1,6 @@
 import { Metadata } from '@redwoodjs/web'
 
-import MastersCell from 'src/components/Master/MasterCell/MasterCell'
+import MastersCell from 'src/components/Master/MastersCell/MastersCell'
 import styles from 'src/pages/MastersPage/mastersPage.module.css'
 
 const MastersPage = () => {
